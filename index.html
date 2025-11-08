@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clima</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Clima</h1>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#consulta">Consultar</a>
+        <a href="#historial">Consultas recientes</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section id="inicio" class="hero">
+    <div class="container hero-inner centered">
+      <h2>Consulta el clima de tu ciudad</h2>
+      <p>Ingresa el nombre de una ciudad y obtén el estado del tiempo en segundos.</p>
+      <a href="#consulta" class="btn btn-primary">Consultar ahora</a>
+    </div>
+  </section>
+
+ 
+  <section id="consulta" class="form-section">
+    <div class="container">
+      <h3>Consulta del Clima</h3>
+      <form id="weatherForm">
+        <div class="grid">
+          <div class="form-group full">
+            <label for="city">Ciudad *</label>
+            <input id="city" type="text" required placeholder="Ejemplo: Bogotá, Madrid, Lima..." />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Buscar</button>
+          <button type="reset" class="btn btn-ghost">Limpiar</button>
+        </div>
+      </form>
+
+      
+      <div id="weatherResult" class="weather-result hidden"></div>
+    </div>
+  </section>
+
+  
+  <section id="historial" class="history-section">
+    <div class="container">
+      <h3>Consultas recientes</h3>
+      <p class="muted">Cada vez que realices una consulta, se guardará y mostrará aquí automáticamente.</p>
+
+      
+      <div id="historyList" class="cards-grid">
+        <p class="muted">Aún no hay consultas registradas.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Clima Fácil — Proyecto Académico</p>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
